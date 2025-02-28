@@ -1,72 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trần Phú English Club</title>
+    <title>English Club Trần Phú</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        body { background-color: #F8F6F3; color: #2D2C2A; font-family: 'Roboto', sans-serif; }
+        .bg-primary { background-color: #ECE7E1; }
+        .text-primary { color: #2D2C2A; }
+        .btn-primary { background-color: #C1B6A4; color: white; border-radius: 30px; padding: 10px 20px; }
+        .btn-primary:hover { background-color: #A99C8F; }
+        .hero {
+            background: url('https://i.imgur.com/zRcBdeV.jpeg') no-repeat center center/cover;
+            color: white;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .title-shadow {
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
-<body class="text-white">
-    <header class="relative">
-        <img class="w-full h-96 object-cover brightness-50" src="https://storage.googleapis.com/a1aa/image/NcrXoJ3JsKyo6tz0BDD5wFOphe07fKg-WYvVzcW4kZA.jpg" alt="English Club Background">
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <h1 class="text-6xl font-extrabold drop-shadow-lg text-pink-200">Trần Phú English Club</h1>
-            <p class="mt-4 max-w-2xl text-lg drop-shadow-lg italic text-yellow-100">Nơi giúp bạn nâng cao kỹ năng tiếng Anh, phát triển bản thân và kết nối với những người bạn tuyệt vời!</p>
-            <button class="mt-6 px-6 py-3 bg-pink-400 text-white font-semibold rounded-full shadow-lg hover:bg-pink-500 transition transform hover:scale-105">Tham gia ngay</button>
-        </div>
-    </header>
+<body class="font-roboto">
+    <!-- Hero Section -->
+    <div class="relative hero text-center"></div>
 
-    <section class="py-16 text-center">
-        <h2 class="text-5xl font-extrabold text-yellow-200 drop-shadow-lg">Về Chúng Tôi</h2>
-        <div class="mt-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 p-4">
-                <p class="text-left text-lg italic">Câu lạc bộ tiếng Anh Trần Phú là nơi hội tụ của những bạn trẻ yêu thích tiếng Anh, mong muốn cải thiện kỹ năng giao tiếp và học hỏi lẫn nhau.</p>
-                <p class="mt-4 text-left text-lg">Chúng tôi tổ chức nhiều hoạt động thú vị như thảo luận nhóm, hùng biện, trò chơi ngôn ngữ, và giao lưu với người bản xứ.</p>
-            </div>
-            <div class="md:w-1/2 p-4">
-                <img class="rounded-3xl shadow-2xl border-4 border-yellow-300" src="https://storage.googleapis.com/a1aa/image/2NFIPprmyv0Ix_bFGCwnXSKn-hwOU31TsQcpoX-lz_o.jpg" alt="Club Activities">
-            </div>
-        </div>
-    </section>
+    <!-- Tiêu đề di chuyển xuống khoảng trống trước Our Values -->
+    <div class="text-center mt-12">
+        <h1 class="text-6xl font-extrabold title-shadow">English Club Trần Phú</h1>
+        <button class="mt-6 btn-primary" onclick="document.getElementById('joinForm').classList.remove('hidden')">Join Now</button>
+    </div>
 
-    <section class="py-16 text-center bg-white text-black">
-        <h2 class="text-5xl font-extrabold text-pink-500 drop-shadow-lg">Hoạt Động Câu Lạc Bộ</h2>
-        <div class="mt-8 flex flex-wrap justify-center gap-8">
-            <div class="bg-pink-200 p-6 rounded-3xl shadow-xl w-80 hover:scale-105 transition transform hover:rotate-3">
-                <div class="text-pink-700 text-5xl mb-4">
-                    <i class="fas fa-comments"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Giao tiếp tiếng Anh</h3>
-                <p>Thực hành tiếng Anh với các thành viên và khách mời nước ngoài.</p>
-            </div>
-            <div class="bg-yellow-200 p-6 rounded-3xl shadow-xl w-80 hover:scale-105 transition transform hover:-rotate-3">
-                <div class="text-yellow-700 text-5xl mb-4">
-                    <i class="fas fa-microphone"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Hùng biện & Thuyết trình</h3>
-                <p>Rèn luyện kỹ năng nói trước đám đông bằng tiếng Anh.</p>
-            </div>
-            <div class="bg-blue-200 p-6 rounded-3xl shadow-xl w-80 hover:scale-105 transition transform hover:rotate-3">
-                <div class="text-blue-700 text-5xl mb-4">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">Trò chơi ngôn ngữ</h3>
-                <p>Học tiếng Anh qua các trò chơi sáng tạo và thú vị.</p>
+    <!-- Form đăng ký -->
+    <div id="joinForm" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-xl font-bold mb-4">Join the Club</h2>
+            <input type="text" placeholder="Họ và Tên" class="w-full mb-2 p-2 border rounded">
+            <input type="text" placeholder="Lớp" class="w-full mb-2 p-2 border rounded">
+            <input type="text" placeholder="Link Facebook" class="w-full mb-2 p-2 border rounded">
+            <div class="flex justify-between mt-4">
+                <button class="btn-primary" onclick="document.getElementById('joinForm').classList.add('hidden')">Submit</button>
+                <button class="btn-primary" onclick="document.getElementById('joinForm').classList.add('hidden')">Close</button>
             </div>
         </div>
-    </section>
+    </div>
+     <!-- Our Values Section -->
+    <div class="py-12 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-primary mb-8">Club image</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/gAgRvBm.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/uvQaXby.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/T127xaC.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/HV6aDPl.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/GDrzpnm.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/NfLrRqf.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/HUMcXxG.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/4NLAofi.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <img src="https://i.imgur.com/SXCTGW2.jpeg" class="w-full h-48 object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+    
+    <!-- School History Section -->
+    <div class="py-12 bg-primary">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-primary">School History</h2>
+            <div class="mt-8 bg-white p-6 rounded-lg shadow-md inline-block">
+                <p class="text-lg">Năm 1981, được sự giúp đỡ của quỹ nhi đồng Liên Hiệp Quốc (UNICEF), Sở Giáo Dục và Đào Tạo Tây Ninh, Huyện Ủy, UBND huyện Tân Biên thành lập trường phổ thông 1,2,3 THẠNH TÂY. Để phát huy truyền thống anh hùng cách mạng, năm 1984 trường đổi tên thành trường THPT TRẦN PHÚ cho đến nay.</p>
+                <p class="text-lg mt-4">Nếu năm học đầu tiên (1981-1982) trường có 25 học sinh cấp 3 với 2 giáo viên trực tiếp giảng dạy thì đến năm học 2017-2018 trường có 26 lớp với hơn 1.000 học sinh và 62 cán bộ, giáo viên, nhân viên.</p>
+            </div>
+        </div>
+    </div>
+    
+    <table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td style="width: 1%; text-align: left; vertical-align: top;"><img alt="" src="/SiteFolders/thptanduong/614/logotayninh.png" /><br />
+            </td>
+            
+            Bản quyền thuộc English club <span id="lblUserName" class="UserName">Trần Ph&uacute;</span><br />
+            Địa chỉ : KP3 - Thị Trấn T&acirc;n Bi&ecirc;n - Huyện T&acirc;n Bi&ecirc;n - Tỉnh T&acirc;y Ninh<br />
+            Điện thoại: (066)3874235<br />
+            
+            </td>
+            <td style="width: 30%; text-align: right; vertical-align: bottom;">Phát triển bởi LỚP 12A3-K42;<br />
+            </td>
+        </tr>
+</body>
+</html>
+ <!-- Script -->
+    <script>
+        emailjs.init("6hmbBr2hbp3RuALPB"); // Public Key của bạn
 
-    <footer class="py-8 bg-gray-900 text-center text-white">
-        <p class="text-2xl font-bold text-pink-300">Join us and improve your English today!</p>
-        <p class="mt-2 text-yellow-200">Liên hệ: contact@tranphuenglishclub.vn</p>
-    </footer>
+        function openForm() {
+            document.getElementById("joinForm").classList.remove("hidden");
+        }
+
+        function closeForm() {
+            document.getElementById("joinForm").classList.add("hidden");
+        }
+
+        function sendMail() {
+            let params = {
+                user_name: document.getElementById("name").value,
+                user_class: document.getElementById("class").value,
+                user_facebook: document.getElementById("facebook").value,
+            };
+
+            emailjs.send("service_lbgsmh8", "template_tgevji5", params)
+                .then(function(response) {
+                    alert("✅ Đăng ký thành công!");
+                    closeForm();
+                }, function(error) {
+                    alert("❌ Lỗi! Vui lòng thử lại.");
+                });
+        }
+    </script>
 </body>
 </html>
